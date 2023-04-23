@@ -1,6 +1,7 @@
 import { getAllTweets, getTweets } from "GetTweets/GetTweets"
 import { Tweet } from "components/Tweet/Tweet"
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom";
 
 
 
@@ -28,6 +29,9 @@ export const TweetsPage = () => {
 console.log()
   return (
     <>
+    <Link to='/'>
+    <button>go home</button>
+    </Link>
       <ul>
         {tweets.map(({id, user, isFollowing, followers, avatar}) => (
           <Tweet
